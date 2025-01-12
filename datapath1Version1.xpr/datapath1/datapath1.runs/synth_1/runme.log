@@ -1,0 +1,48 @@
+
+*** Running vivado
+    with args -log datapath1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath1.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Nov 10 21:03:26 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source datapath1.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 567.797 ; gain = 236.512
+Command: synth_design -top datapath1 -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11088
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1020.926 ; gain = 450.152
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2716] syntax error near 'input' [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:31]
+ERROR: [Synth 8-10307] Verilog 2000 keyword 'input' used in incorrect context [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:31]
+ERROR: [Synth 8-2716] syntax error near 'output' [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:43]
+ERROR: [Synth 8-10307] Verilog 2000 keyword 'output' used in incorrect context [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:43]
+ERROR: [Synth 8-36] 'ALUresultE' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:23]
+ERROR: [Synth 8-36] 'ResultSrcM' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:25]
+ERROR: [Synth 8-36] 'ResultSrcM' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:48]
+ERROR: [Synth 8-36] 'ALUresultM' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:49]
+ERROR: [Synth 8-36] 'ALUresultE' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:58]
+ERROR: [Synth 8-36] 'ResultSrcM' is not declared [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:63]
+INFO: [Synth 8-10285] module 'regExecutetoMem1' is ignored due to previous errors [C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v:68]
+INFO: [Synth 8-9084] Verilog file 'C:/Users/cp123/datapath1/datapath1.srcs/sources_1/new/regExecutetoMem1.v' ignored due to errors
+ERROR: [Synth 8-439] module 'datapath1' not found
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1130.117 ; gain = 559.344
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 12 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 21:03:41 2024...
